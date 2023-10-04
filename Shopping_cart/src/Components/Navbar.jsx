@@ -1,14 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return(
         <>
             <nav>
-                Store
+                <Link to = {"/"} style={{color: 'white', textDecoration: 'none'}}>
+                    <h2>Store</h2>
+                </Link>
+
                 <ul className="nav-list">
-                    <li>
-                        Cart items: <span className="cart-count">0</span>
-                    </li>
+                    <Link to={"/cart"} style={{color: 'white', textDecoration: 'none'}}>
+                        <li>
+                            Cart items: <span className="cart-count">0</span>
+                        </li>
+                    </Link>
                 </ul>
             </nav>
         </>
